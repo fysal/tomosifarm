@@ -1,10 +1,50 @@
+:root{
+  --grey-bg:#fafafa
+}
+body {
+  margin: 0;
+  font-family:"Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .App {
   text-align: center;
 }
+.grey_bg{ background: var(--grey-bg)}
 
+.container{
+  max-width: 1170px;
+}
+h1,h2,h3,h4{
+  font-family: Inter, sans-serif;
+  font-weight: 800;
+}
+
+h1{text-transform: capitalize; font-size:4rem}
+
+.bg_exp {
+    height: 400px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.slider{
+  max-height: 600px;
+  height:700px
+}
+
+.btex {
+    color: #fff;
+    max-width: 600px;
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -3px;
+    text-align: left;
+    font-family: Inter, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
