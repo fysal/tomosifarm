@@ -3,7 +3,7 @@
 }
 body {
   margin: 0;
-  font-family:"Poppins", sans-serif;
+  font-family:"Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,6 +12,14 @@ body {
   text-align: center;
 }
 .grey_bg{ background: var(--grey-bg)}
+
+li.nav-item {
+    margin: 0 10px;
+    padding: 0 10px;
+}
+:is(li.nav-item a.active, li.nav-item a:hover) {
+    font-weight: bold;
+}
 
 .container{
   max-width: 1170px;
@@ -42,7 +50,7 @@ h1{text-transform: capitalize; font-size:4rem}
 }
 
 .slider{
-  max-height: 600px;
+  max-height: 700px;
   height:700px
 }
 
