@@ -49,9 +49,9 @@ const WhatWeDo = () => {
                 }}
               ></div>
               <div className="col-sm-12 col-md-6 d-flex align-items-start justify-content-center flex-column">
-                <div className={clsx(index % 2 ===0 ? "ps-5" : "pe-5")}>
+                <div className={clsx(index % 2 ===0 ? "ps-5" : "pe-5", "py-5")}>
                 <h3 className="">{expert.title}</h3>
-                <div className="small">{expert.description}</div>
+                <div className="">{expert.description}</div>
                 </div>
               </div>
             </div>
