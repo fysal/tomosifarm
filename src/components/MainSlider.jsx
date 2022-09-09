@@ -11,7 +11,7 @@ const MainSlider = () => {
       >
         <div className="ovl"></div>
         <div className="container position-relative">
-          <div className="btex">Increase the incomes of our nations</div>
+          <div className="btex">Commited to adopting technology and innovation</div>
         </div>
       </div>
     </div>
