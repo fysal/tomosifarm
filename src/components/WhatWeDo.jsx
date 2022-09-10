@@ -4,6 +4,7 @@ import aerialpic from "../assets/slides/farm-aerial.jpg";
 import largscale from "../assets/slides/tomosi-grounds.jpg";
 import dairypic from "../assets/slides/frasian-cows.jpg";
 import clsx from "clsx";
+
 const WhatWeDo = () => {
   const expertise = [
     {
@@ -32,7 +33,7 @@ const WhatWeDo = () => {
     },
   ];
   return (
-    <div className="py-5">
+    <div className="py-5" id="what-we-do">
       <div className="container">
         <h1 className="mb-4">What We Do</h1>
 

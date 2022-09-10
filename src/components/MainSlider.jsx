@@ -1,20 +1,39 @@
-import React from 'react'
-import Slider1 from '../assets/slides/tomosi-farm.jpg'
+import React, { useEffect } from 'react';
+import Carousel from "nuka-carousel";
+import Slider1 from '../assets/slides/tomosi-farm.jpg';
+import Slider2 from '../assets/slides/tomosi-cows.jpg';
+import Slider3 from '../assets/slides/crater-lake.jpg';
+import Slider4 from '../assets/slides/tomosi-farm.jpg';
 const MainSlider = () => {
+  const slides = [Slider1, Slider2, Slider3, Slider4];
+
+    useEffect(() => {
+      let nextBtn = document.querySelector('[aria-label="next"]');
+      let prevBtn = document.querySelector('[aria-label="previous"]');
+      nextBtn.innerHTML = '<span class="material-icons-outlined">east</span>';
+      prevBtn.innerHTML = '<span class="material-icons-outlined">west</span>';
+    }, []);
+    
   return (
-    <div className="main-slider">
-      <div
-        className="slider sider-1 d-flex align-items-start justify-content-center flex-column position-relative"
-        style={{
-          background: `url(${Slider1}) no-repeat scroll center / cover`,
-        }}
-      >
-        <div className="ovl"></div>
-        <div className="container position-relative">
-          <div className="btex">Commited to adopting technology and innovation</div>
+    <Carousel wrapAround={true} autoPlay={true} withoutControls={false}>
+      {slides.map((slide, index) => (
+        <div className="main-slider" key={index}>
+          <div
+            className="slider sider-1 d-flex align-items-start justify-content-center flex-column position-relative"
+            style={{
+              background: `url(${slide}) no-repeat scroll center / cover`,
+            }}
+          >
+            <div className="ovl"></div>
+            <div className="container position-relative">
+              <div className="btex">
+                Commited to adopting technology and innovation
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      ))}
+    </Carousel>
   );
 }
 
