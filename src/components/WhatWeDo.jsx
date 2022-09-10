@@ -8,7 +8,7 @@ import clsx from "clsx";
 const WhatWeDo = () => {
   const expertise = [
     {
-      title: "Dairy farming",
+      title: "Dairy Farming",
       image: animalfarming,
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -34,7 +34,7 @@ const WhatWeDo = () => {
   ];
   return (
     <div className="py-5" id="what-we-do">
-      <div className="container mt-5">
+      <div className="container mt-5 pb-5">
         <h1 className="mb-4">What We Do</h1>
 
         <div className="content">

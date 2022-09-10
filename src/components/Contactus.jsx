@@ -27,7 +27,7 @@ const Contactus = () => {
       <div className="container py-4">
         <h1 className="mb-5"> Contact Us</h1>
 
-        <div className="content">
+        <div className="content pb-5">
           <div className="row">
             {contactItems.map((item, index) => (
               <div className="col-sm-12 col-md-4" key={index}>
