@@ -5,7 +5,12 @@ import Slider2 from "../assets/slides/tomosi-cows.jpg";
 import Slider3 from "../assets/slides/crater-lake.jpg";
 import Slider4 from "../assets/slides/farm-aerial.jpg";
 const MainSlider = () => {
-  const slides = [Slider1, Slider2, Slider3, Slider4];
+  const slides = [
+    { slide: Slider1, text: "Commited to adopting technology and innovation" },
+    { slide: Slider2, text: "We are passionate, forward-thinking farmers" },
+    { slide: Slider3, text: "We encourage continuous learning" },
+    { slide: Slider4, text: "We are passionate, forward-thinking farmers" },
+  ];
 
   useEffect(() => {
     let nextBtn = document.querySelector('[aria-label="next"]');
@@ -27,18 +32,18 @@ const MainSlider = () => {
       animation="slide"
       speed={1200}
     >
-      {slides.map((slide, index) => (
+      {slides.map((item, index) => (
         <div className="main-slider" key={index}>
           <div
             className="slider sider-1 d-flex align-items-start justify-content-center flex-column position-relative"
             style={{
-              background: `url(${slide}) no-repeat scroll center / cover`,
+              background: `url(${item.slide}) no-repeat scroll center / cover`,
             }}
           >
             <div className="ovl"></div>
             <div className="container position-relative">
               <div className="btex">
-                Commited to adopting technology and innovation
+               {item.text}
               </div>
             </div>
           </div>

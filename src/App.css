@@ -1,6 +1,7 @@
 :root{
   --grey-bg:#fafafa;
   --primary-color: #79A13E;
+  --primary-color-dark: #4d7019;
 }
 body {
   margin: 0;
@@ -11,6 +12,19 @@ body {
   line-height:1.8
 }
 
+.btn {
+    border-radius: 0;
+}
+
+.btn-primary{
+  background: var(--primary-color);
+  border-color: var(--primary-color)
+}
+.btn-primary:hover{
+  background: var(--primary-color-dark)  !important;
+  border-color: var(--primary-color-dark) !important
+}
+.bg-primary{ background: var(--primary-color) !important}
 .App {
   text-align: center;
 }

@@ -8,8 +8,8 @@ const Nav = () => {
     { name: "home", link: "" },
     { name: "about us", link: "about-us" },
     { name: "what we do", link: "what-we-do" },
-    { name: "news", link: "news" },
-    { name: "contact us", link: "contact" },
+    // { name: "news", link: "news" },
+    { name: "contact us", link: "contact-us" },
   ];
   const [activeLink, setActiveLink] = useState("");
 

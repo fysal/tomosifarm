@@ -1,7 +1,7 @@
-import React,{ useRef} from "react";
+import React, { useRef } from "react";
 
 const Aboutus = () => {
-    const myRef = useRef(null)
+  const myRef = useRef(null);
   const keyreasons = [
     `Africa, by the turn of the century, will have an estimated 40% of the global population (UN figures) with a middle class 
     of well over 1billion people. These will need better protein and organic foods. Uganda in particular has 78% of her population under 30. When these come into a full consumption age, there will be a huge need for food and shelter. We would like to be part of this revolution by providing high quality dairy and beef products to this market. There is a lot of future revenues that can be tapped for many decades to come but currently hidden in these population numbers.`,
@@ -14,13 +14,13 @@ const Aboutus = () => {
       <div className="container">
         <h1 className="pt-5">About us</h1>
         <div className="content small">
-       At Tomosi’s Farm Bwesharire, we began
-          with increasing milk production and processing by working with and
-          through a cooperative in 2007 and now we are venturing into beef and
-          feed production. A technical school, a Dairy plant, a Feed mill and a
-          Beef processing facility, all projects we are working on as a farm,
-          will fundamentally transform Uganda’s agricultural sector and improve
-          the economy of the communities we work in.
+          At Tomosi’s Farm Bwesharire, we began with increasing milk production
+          and processing by working with and through a cooperative in 2007 and
+          now we are venturing into beef and feed production. A technical
+          school, a Dairy plant, a Feed mill and a Beef processing facility, all
+          projects we are working on as a farm, will fundamentally transform
+          Uganda’s agricultural sector and improve the economy of the
+          communities we work in.
         </div>
 
         <h2 className="pt-5 pb-3">
@@ -35,6 +35,12 @@ const Aboutus = () => {
               </div>
             ))}
           </div>
+        </div>
+        <div className="text-center mt-5 ">
+          {" "}
+          <span className="btn btn-primary py-3 px-4">
+            <span className="fw-bold ">Take a video tour</span>
+          </span>
         </div>
       </div>
     </div>
