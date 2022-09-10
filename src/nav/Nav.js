@@ -33,7 +33,7 @@ const Nav = () => {
   });
 
   return (
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navbar navbar-expand-lg bg-white">
       <div className="container">
         <a className="navbar-brand" href="/">
           <img src={Logo} width="80" />

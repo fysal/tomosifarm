@@ -13,7 +13,7 @@ const Aboutus = () => {
     <div className="grey_bg py-5" id="about-us" ref={myRef}>
       <div className="container">
         <h1 className="pt-5">About us</h1>
-        <div className="content">
+        <div className="content small">
        At Tomosi’s Farm Bwesharire, we began
           with increasing milk production and processing by working with and
           through a cooperative in 2007 and now we are venturing into beef and
@@ -30,7 +30,7 @@ const Aboutus = () => {
         <div className="">
           <div className="row">
             {keyreasons.map((reason, index) => (
-              <div className="col-sm-12 col-md-6 text-muted" key={index}>
+              <div className="col-sm-12 col-md-6  small" key={index}>
                 <span className="fct">{index + 1}</span> {reason}
               </div>
             ))}
