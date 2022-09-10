@@ -1,21 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import Carousel from "nuka-carousel";
-import Slider1 from '../assets/slides/tomosi-farm.jpg';
-import Slider2 from '../assets/slides/tomosi-cows.jpg';
-import Slider3 from '../assets/slides/crater-lake.jpg';
-import Slider4 from '../assets/slides/tomosi-farm.jpg';
+import Slider1 from "../assets/slides/tomosi-farm.jpg";
+import Slider2 from "../assets/slides/tomosi-cows.jpg";
+import Slider3 from "../assets/slides/crater-lake.jpg";
+import Slider4 from "../assets/slides/farm-aerial.jpg";
 const MainSlider = () => {
   const slides = [Slider1, Slider2, Slider3, Slider4];
 
-    useEffect(() => {
-      let nextBtn = document.querySelector('[aria-label="next"]');
-      let prevBtn = document.querySelector('[aria-label="previous"]');
-      nextBtn.innerHTML = '<span class="material-icons-outlined">east</span>';
-      prevBtn.innerHTML = '<span class="material-icons-outlined">west</span>';
-    }, []);
-    
+  useEffect(() => {
+    let nextBtn = document.querySelector('[aria-label="next"]');
+    let prevBtn = document.querySelector('[aria-label="previous"]');
+    nextBtn.innerHTML = '<span class="material-icons-outlined">east</span>';
+    prevBtn.innerHTML = '<span class="material-icons-outlined">west</span>';
+  }, []);
+
   return (
-    <Carousel wrapAround={true} autoPlay={true} withoutControls={false}>
+    <Carousel
+      wrapAround={true}
+      autoplay={true}
+      withoutControls={false}
+      animation="slide"
+      speed={1200}
+    >
       {slides.map((slide, index) => (
         <div className="main-slider" key={index}>
           <div
@@ -35,6 +41,6 @@ const MainSlider = () => {
       ))}
     </Carousel>
   );
-}
+};
 
-export default MainSlider
+export default MainSlider;

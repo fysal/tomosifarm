@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/logo/logo.jpg";
-import { useLocation} from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 import clsx from "clsx";
 const Nav = () => {
-  const location = useLocation()
+  const location = useLocation();
   const links = [
     { name: "home", link: "" },
     { name: "about us", link: "about-us" },
@@ -11,17 +11,27 @@ const Nav = () => {
     { name: "news", link: "news" },
     { name: "contact us", link: "contact" },
   ];
-  const [activeLink, setActiveLink] = useState("#")
+  const [activeLink, setActiveLink] = useState("");
 
   useEffect(() => {
-   setActiveLink(location.hash)
-  },[location])
+    setActiveLink(location.hash);
+  }, [location]);
 
-  console.log(activeLink)
   function scrollToDiv(e) {
-    const box = document.getElementById(e.target.getAttribute("data"));
-    box.scrollIntoView();
+    console.log(e.target.textContent);
+    if (e.target.textContent === "home") window.scrollTo(0, 0);
+    else {
+      const box = document.getElementById(e.target.getAttribute("data"));
+      box.scrollIntoView();
+      window.scrollBy(0,100)
+    }
   }
+  document.addEventListener("scroll", () => {
+    if (window.scrollY > 0)
+      document.querySelector(".navbar").classList.add("fixed-top");
+    else document.querySelector(".navbar").classList.remove("fixed-top");
+  });
+
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container">
@@ -47,7 +57,10 @@ const Nav = () => {
             {links.map((item, index) => (
               <li className="nav-item" key={index}>
                 <a
-                  className={clsx("nav-link text-capitalize",activeLink === `#${item.link}` && "active" )}
+                  className={clsx(
+                    "nav-link text-capitalize",
+                    activeLink === `#${item.link}` && "active"
+                  )}
                   aria-current="page"
                   href={`#${item.link}`}
                   data={item.link}
