@@ -14,6 +14,11 @@ const MainSlider = () => {
     prevBtn.innerHTML = '<span class="material-icons-outlined">west</span>';
   }, []);
 
+  document.addEventListener("DOMContentLoaded", function () {
+    var w = document.querySelector(".slider-container").offsetHeight;
+    console.log(w);
+  });
+
   return (
     <Carousel
       wrapAround={true}

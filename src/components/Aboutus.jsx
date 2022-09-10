@@ -30,7 +30,7 @@ const Aboutus = () => {
         <div className="">
           <div className="row">
             {keyreasons.map((reason, index) => (
-              <div className="col-sm-12 col-md-6 small" key={index}>
+              <div className="col-sm-12 col-md-6 text-muted" key={index}>
                 <span className="fct">{index + 1}</span> {reason}
               </div>
             ))}

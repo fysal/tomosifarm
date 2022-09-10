@@ -17,7 +17,7 @@ const WhatWeDo = () => {
       title: " Mechanised Farming",
       image: aerialpic,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Our biggest efforts lie in creating mutually beneficial relationships at every level, including training and supporting the local dairy farmers who supply raw milk to our factory, mentoring and employing young Ugandans and facilitating their growth into industry professionals, empowering the economy by introducing superior technology, and improving the quality of life in Uganda and neighbouring regions by providing first-class yet pocket-friendly products.",
     },
     {
       title: "Animal Rearing",
@@ -34,7 +34,7 @@ const WhatWeDo = () => {
   ];
   return (
     <div className="py-5" id="what-we-do">
-      <div className="container">
+      <div className="container mt-5">
         <h1 className="mb-4">What We Do</h1>
 
         <div className="content">
@@ -52,7 +52,7 @@ const WhatWeDo = () => {
               <div className="col-sm-12 col-md-6 d-flex align-items-start justify-content-center flex-column">
                 <div className={clsx(index % 2 ===0 ? "ps-5" : "pe-5", "py-5")}>
                 <h3 className="">{expert.title}</h3>
-                <div className="">{expert.description}</div>
+                <div className="text-muted">{expert.description}</div>
                 </div>
               </div>
             </div>
