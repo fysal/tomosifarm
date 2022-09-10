@@ -1,6 +1,9 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
+import Youtube from "react-youtube";
 
 const Aboutus = () => {
+   const [showVideoPlayer, setShowVideoPlayer] = useState(false);
+
   const myRef = useRef(null);
   const keyreasons = [
     `Africa, by the turn of the century, will have an estimated 40% of the global population (UN figures) with a middle class 
@@ -9,6 +12,8 @@ const Aboutus = () => {
     in the agriculture sector. This sector contributes a lion’s share of the GDP of many African nations. Our years with dairy
      farming have taught us that unless there is deep collaboration between the producer, the trader and the processor, a lot of value is lost and the productivity chain gets stunted causing poverty eradication effort to stall. Our farm would like to be the regional leader in helping improve the productivity of farmers and setting an example for the African elite who currently think agriculture is a risky venture.`,
   ];
+
+  console.log(showVideoPlayer)
   return (
     <div className="grey_bg py-5" id="about-us" ref={myRef}>
       <div className="container">
@@ -37,14 +42,39 @@ const Aboutus = () => {
           </div>
         </div>
         <div className="text-center mt-5 ">
-          {" "}
-          <span className="btn btn-primary py-3 px-4">
+         {showVideoPlayer === true && <YoutubePopup setShowVideoPlayer={setShowVideoPlayer} />}
+          <span className="btn btn-primary py-3 px-4" onClick={()=>setShowVideoPlayer(true)}>
             <span className="fw-bold ">Take a video tour</span>
           </span>
-        </div>
+        </div> 
       </div>
     </div>
   );
 };
 
 export default Aboutus;
+
+export const YoutubePopup = ({setShowVideoPlayer}) => {
+    
+     const videoString = "hJM6zoYENS8";
+
+     const videoOptions = {
+       height: "100%",
+       width: "100%",
+       playerVars: { autoplay: 1 },
+     };
+  return (
+    <div className="vid_wrapper d-flex align-items-center justify-content-center">
+
+      <div className="vidinner">
+        <span className="material-icons-outlined _close_btn" onClick={()=>setShowVideoPlayer(false)}>close</span>
+        <Youtube
+          opts={videoOptions}
+          onEnd={() => setShowVideoPlayer(false)}
+          videoId={videoString}
+          className="__fitVid"
+        />
+      </div>
+    </div>
+  );
+};

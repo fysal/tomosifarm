@@ -30,7 +30,7 @@ const Contactus = () => {
         <div className="content pb-5">
           <div className="row">
             {contactItems.map((item, index) => (
-              <div className="col-sm-12 col-md-4" key={index}>
+              <div className="col-sm-12 col-md-4 mb-3" key={index}>
                 <div className="bg-white rounded p-4">
                   <span className="material-icons-outlined p-3 rounded text-white bg-primary">
                     {item.icon}

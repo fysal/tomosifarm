@@ -1,55 +1,108 @@
-:root{
-  --grey-bg:#fafafa;
-  --primary-color: #79A13E;
+:root {
+  --grey-bg: #fafafa;
+  --primary-color: #79a13e;
   --primary-color-dark: #4d7019;
 }
 body {
   margin: 0;
-  font-family:"Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
-  line-height:1.8
+  line-height: 1.8;
 }
 
 .btn {
-    border-radius: 0;
+  border-radius: 0;
 }
 
-.btn-primary{
+.btn-primary {
   background: var(--primary-color);
-  border-color: var(--primary-color)
+  border-color: var(--primary-color);
 }
-.btn-primary:hover{
-  background: var(--primary-color-dark)  !important;
-  border-color: var(--primary-color-dark) !important
+.btn-primary:hover {
+  background: var(--primary-color-dark) !important;
+  border-color: var(--primary-color-dark) !important;
 }
-.bg-primary{ background: var(--primary-color) !important}
+.bg-primary {
+  background: var(--primary-color) !important;
+}
 .App {
   text-align: center;
 }
-.grey_bg{ background: var(--grey-bg)}
+.grey_bg {
+  background: var(--grey-bg);
+}
+.__fitVid {
+  background: #000;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block;
+  z-index: 5;
+}
+
+.vidinner {
+  height: 437px;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  box-shadow: 0 0 6px 3px #0000000d;
+  padding: 10px;
+  background-color: #fff;
+}
+.vid_wrapper {
+  width: 100%;
+  height: 100%;
+  background: #0000008f;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+._close_btn {
+    position: absolute;
+    right: -8px;
+    top: -53px;
+    background-color: #fff;
+    padding: 11px;
+    z-index: 6;
+    border-radius: 50%;
+    cursor: pointer;
+}
 
 li.nav-item {
-    margin: 0 10px;
-    padding: 0 10px;
+  margin: 0 10px;
+  padding: 0 10px;
 }
 :is(li.nav-item a.active, li.nav-item a:hover) {
-    font-weight: bold;
+  font-weight: bold;
 }
 
-.container{
+
+.container {
   max-width: 1170px;
 }
-h1,h2,h3,h4{
+h1,
+h2,
+h3,
+h4 {
   font-family: Inter, sans-serif;
   font-weight: 800;
 }
 
-h1{text-transform: capitalize; font-size:4rem}
+h1 {
+  text-transform: capitalize;
+  font-size: 4rem;
+}
 
 .bg_exp {
-    height: 400px;
+  height: 400px;
 }
 .App-logo {
   height: 40vmin;
@@ -57,55 +110,55 @@ h1{text-transform: capitalize; font-size:4rem}
 }
 
 .ovl {
-    position: absolute;
-    content: '';
-    background: #00000045;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+  position: absolute;
+  content: "";
+  background: #00000045;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
-.navbar{}
-.navbar img{
-  transition: width .3s ease-in-out;
+.navbar {
+}
+.navbar img {
+  transition: width 0.3s ease-in-out;
 }
 .fct {
-    padding: 24px;
-    background: var(--primary-color);
-    width: 38px;
-    height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: bold;
-    font-size: 21px;
-    margin-bottom: 20px;
-    /* margin-right: 20px; */
+  padding: 24px;
+  background: var(--primary-color);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 21px;
+  margin-bottom: 20px;
+  /* margin-right: 20px; */
 }
-.navbar.fixed-top img{
+.navbar.fixed-top img {
   width: 50px;
 }
-.navbar{
-
-    box-shadow: 0 0 6px 3px #0000001c;
+.navbar {
+  box-shadow: 0 0 6px 3px #0000001c;
 }
 
-.slider{
+.slider {
   max-height: 650px;
-  height:650px;
-  width:100%;
+  height: 650px;
+  width: 100%;
 }
 
 .btex {
-    color: #fff;
-    max-width: 700px;
-    font-size: 4.5rem;
-    font-weight: 800;
-    line-height: 1;
-    letter-spacing: -3px;
-    text-align: left;
-    font-family: Inter, sans-serif;
+  color: #fff;
+  max-width: 700px;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -3px;
+  text-align: left;
+  font-family: Inter, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {
