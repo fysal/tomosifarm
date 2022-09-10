@@ -11,7 +11,7 @@ const WhatWeDo = () => {
       title: "Dairy Farming",
       image: animalfarming,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Demand for milk products has been growing and so has Tomosi's Farm dairy products output. From our 1,000+ Fresian breed we have seen our milk output grow tremendously thanks to some of the modern farming practices that we have adopted at the farm.",
     },
     {
       title: " Mechanised Farming",
@@ -23,13 +23,13 @@ const WhatWeDo = () => {
       title: "Animal Rearing",
       image: dairypic,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "We are committed to producing the highest quality beef. Everything we do is focused on the wellbeing and welfare of our animals and controlling the impact on the environment. Our relaxed cattle have fresh food as required with a nutritious menu..",
     },
     {
       title: "Large Scale Farming",
       image: largscale,
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        "Throughout Tomosi's Farm history, the family have worked long and hard, gathering a wealth of farming knowledge. Traditional practices have played an important role in maintaining a sustainable production system long before the days of modern farm machinery. We have onboarded modern farming methods since and this has improved our general farm output tremendously..",
     },
   ];
   return (
