@@ -13,7 +13,6 @@ const Aboutus = () => {
      farming have taught us that unless there is deep collaboration between the producer, the trader and the processor, a lot of value is lost and the productivity chain gets stunted causing poverty eradication effort to stall. Our farm would like to be the regional leader in helping improve the productivity of farmers and setting an example for the African elite who currently think agriculture is a risky venture.`,
   ];
 
-  console.log(showVideoPlayer)
   return (
     <div className="grey_bg py-5" id="about-us" ref={myRef}>
       <div className="container">

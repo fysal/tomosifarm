@@ -1,15 +1,15 @@
 import React from "react";
-import animalfarming from "../assets/slides/tomosi-cows.jpg";
+import animalfarming from "../assets/slides/animal-farming.jpg";
 import aerialpic from "../assets/slides/farm-aerial.jpg";
 import largscale from "../assets/slides/tomosi-grounds.jpg";
-import dairypic from "../assets/slides/frasian-cows.jpg";
+import dairypic from "../assets/slides/dairy-farming.jpg";
 import clsx from "clsx";
 
 const WhatWeDo = () => {
   const expertise = [
     {
       title: "Dairy Farming",
-      image: animalfarming,
+      image: dairypic,
       description:
         "Demand for milk products has been growing and so has Tomosi's Farm dairy products output. From our 1,000+ Fresian breed we have seen our milk output grow tremendously thanks to some of the modern farming practices that we have adopted at the farm.",
     },
@@ -21,7 +21,7 @@ const WhatWeDo = () => {
     },
     {
       title: "Animal Rearing",
-      image: dairypic,
+      image: animalfarming,
       description:
         "We are committed to producing the highest quality beef. Everything we do is focused on the wellbeing and welfare of our animals and controlling the impact on the environment. Our relaxed cattle have fresh food as required with a nutritious menu..",
     },
