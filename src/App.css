@@ -149,6 +149,11 @@ h1 {
   height: 650px;
   width: 100%;
 }
+.slider_small {
+	max-height: 437px;
+	height: 437px;
+	width: 100%;
+}
 
 .btex {
   color: #fff;
@@ -159,6 +164,16 @@ h1 {
   letter-spacing: -3px;
   text-align: left;
   font-family: Inter, sans-serif;
+}
+.btex_small {
+	color: #fff;
+	max-width: 700px;
+	font-size: 3.0rem;
+	font-weight: 800;
+	line-height: 1.2;
+	letter-spacing: -3px;
+	text-align: left;
+	font-family: Inter, sans-serif;
 }
 
 @media (prefers-reduced-motion: no-preference) {

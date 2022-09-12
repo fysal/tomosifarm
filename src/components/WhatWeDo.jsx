@@ -4,8 +4,12 @@ import aerialpic from "../assets/slides/farm-aerial.jpg";
 import largscale from "../assets/slides/tomosi-grounds.jpg";
 import dairypic from "../assets/slides/dairy-farming.jpg";
 import clsx from "clsx";
+import { useMediaQuery } from "react-responsive";
 
 const WhatWeDo = () => {
+
+    const isMobile = useMediaQuery({ query: "(max-width:800px)" });
+
   const expertise = [
     {
       title: "Dairy Farming",
@@ -50,9 +54,14 @@ const WhatWeDo = () => {
                 }}
               ></div>
               <div className="col-sm-12 col-md-6 d-flex align-items-start justify-content-center flex-column">
-                <div className={clsx(index % 2 ===0 ? "ps-5" : "pe-5", "py-5")}>
-                <h3 className="">{expert.title}</h3>
-                <div className="small">{expert.description}</div>
+                <div
+                  className={clsx(
+                    !isMobile ? index % 2 === 0 ? "ps-5" : "pe-5" : null,
+                    "py-5"
+                  )}
+                >
+                  <h3 className="">{expert.title}</h3>
+                  <div className="small">{expert.description}</div>
                 </div>
               </div>
             </div>
