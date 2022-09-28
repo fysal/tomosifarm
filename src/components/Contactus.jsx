@@ -18,7 +18,7 @@ const Contactus = () => {
       icon: "map",
       title: "Visit us",
       text: "Visit our office HQ",
-      contact: "Plot 37/41 Luzira Portbell, Kampala, Uganda",
+      contact: "Plot 37/41, Luzira Portbell, Kampala, Uganda",
     },
   ];
 
