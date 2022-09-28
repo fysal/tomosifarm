@@ -12,7 +12,7 @@ const Contactus = () => {
       icon: "phone",
       title: "Call us",
       text: "Mon-Fri from 8am to 5pm",
-      contact: "+(256) 414 220 702 , +(256) 750 981 360",
+      contact: "+(256) 414 220 702 / 750 981 360",
     },
     {
       icon: "map",
