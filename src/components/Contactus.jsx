@@ -6,13 +6,13 @@ const Contactus = () => {
       icon: "email",
       title: "Chat to experts",
       text: "Speak to our friendly team",
-      contact: "info@tomosisfarm.com",
+      contact: "info@tomosigroup.ug",
     },
     {
       icon: "phone",
       title: "Call us",
       text: "Mon-Fri from 8am to 5pm",
-      contact: "+(256) 784 903 072",
+      contact: "+(256) 414 220 702 , +(256) 750 981 360",
     },
     {
       icon: "map",
