@@ -1,15 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../assets/logo/logo.jpg";
-import { useLocation } from "react-router-dom";
+import { useLocation, NavLink } from "react-router-dom";
 import clsx from "clsx";
 const Nav = () => {
   const location = useLocation();
   const links = [
-    { name: "home", link: "" },
-    { name: "about us", link: "about-us" },
-    { name: "what we do", link: "what-we-do" },
+    { name: "home", link: "", target: "" },
+    { name: "about us", link: "about-us", target: "" },
+    { name: "what we do", link: "what-we-do", target: "" },
     // { name: "news", link: "news" },
-    { name: "contact us", link: "contact-us" },
+    { name: "contact us", link: "contact-us", target: "" },
+    { name: "training", link: "training", target: "node" },
   ];
   const [activeLink, setActiveLink] = useState("");
 
@@ -23,7 +24,7 @@ const Nav = () => {
     else {
       const box = document.getElementById(e.target.getAttribute("data"));
       box.scrollIntoView();
-      window.scrollBy(0,100)
+      window.scrollBy(0, 100);
     }
   }
   document.addEventListener("scroll", () => {
@@ -56,18 +57,24 @@ const Nav = () => {
           <ul className="navbar-nav">
             {links.map((item, index) => (
               <li className="nav-item" key={index}>
-                <a
-                  className={clsx(
-                    "nav-link text-capitalize",
-                    activeLink === `#${item.link}` && "active"
-                  )}
-                  aria-current="page"
-                  href={`#${item.link}`}
-                  data={item.link}
-                  onClick={scrollToDiv}
-                >
-                  {item.name}
-                </a>
+                {item.target === "node" ? (
+                  <NavLink className="nav-link text-capitalize" to={item.link}>
+                    {item.name}
+                  </NavLink>
+                ) : (
+                  <a
+                    className={clsx(
+                      "nav-link text-capitalize",
+                      activeLink === `#${item.link}` && "active"
+                    )}
+                    aria-current="page"
+                    href={`/#${item.link}`}
+                    data={item.link}
+                    onClick={scrollToDiv}
+                  >
+                    {item.name}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
