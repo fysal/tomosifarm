@@ -2,15 +2,19 @@ import React, { useEffect, useState } from "react";
 import Logo from "../assets/logo/logo.jpg";
 import { useLocation, NavLink } from "react-router-dom";
 import clsx from "clsx";
+import trainingFile from '../assets/files/training-curriculum.pdf';
+
+
 const Nav = () => {
   const location = useLocation();
+
   const links = [
     { name: "home", link: "", target: "" },
     { name: "about us", link: "about-us", target: "" },
     { name: "what we do", link: "what-we-do", target: "" },
     // { name: "news", link: "news" },
     { name: "contact us", link: "contact-us", target: "" },
-    { name: "training", link: "training", target: "node" },
+    { name: "training", link: `${trainingFile}`, target: "node" },
   ];
   const [activeLink, setActiveLink] = useState("");
 
@@ -58,9 +62,9 @@ const Nav = () => {
             {links.map((item, index) => (
               <li className="nav-item" key={index}>
                 {item.target === "node" ? (
-                  <NavLink className="nav-link text-capitalize" to={item.link}>
+                  <a className="nav-link text-capitalize" href={item.link}>
                     {item.name}
-                  </NavLink>
+                  </a>
                 ) : (
                   <a
                     className={clsx(
