@@ -18,13 +18,28 @@ const Aboutus = () => {
       <div className="container">
         <h1 className="pt-5">About us</h1>
         <div className="content small">
-          At Tomosi’s Farm Bwesharire, we began with increasing milk production
-          and processing by working with and through a cooperative in 2007 and
-          now we are venturing into beef and feed production. A technical
-          school, a Dairy plant, a Feed mill and a Beef processing facility, all
-          projects we are working on as a farm, will fundamentally transform
-          Uganda’s agricultural sector and improve the economy of the
-          communities we work in.
+          Tomosi’s farm began in 1964 as a small peasant holding in South
+          western Uganda. Its first 35 years saw the improvement of the breed
+          from the traditional Ankore cow to the first line of Friesians, led
+          community education on improved crop cultivation, expanded acreage
+          under production and titled the land for commercial purposes. At
+          Tomosi’s Farm Bwesharire, we began with increasing milk production and
+          processing by working with and through a cooperative in 2007 and now
+          we are venturing into beef and feed production. A technical school, a
+          Dairy plant, a Feed mill and a Beef processing facility, all projects
+          we are working on as a farm, will fundamentally transform Uganda’s
+          agricultural sector and improve the economy of the communities we work
+          in.
+        </div>
+        <h2 className="mt-3">Our Vision</h2>
+        <div className="small">
+          To build a resilient three stringed rope in production and improved
+          productivity of farmers in Uganda as a model for the region and
+          Africa. The first strand of the rope was to build a 500,000-processing
+          capacity dairy plant, the second to set up a beef slaughter house of
+          500 cows a day capacity and the third to run a modern agricultural
+          training institute for the youth, graduating annually 1000 agriculture
+          extension service officers.
         </div>
 
         <h2 className="pt-5 pb-3">
@@ -41,11 +56,16 @@ const Aboutus = () => {
           </div>
         </div>
         <div className="text-center mt-5 ">
-         {showVideoPlayer === true && <YoutubePopup setShowVideoPlayer={setShowVideoPlayer} />}
-          <span className="btn btn-primary py-3 px-4" onClick={()=>setShowVideoPlayer(true)}>
+          {showVideoPlayer === true && (
+            <YoutubePopup setShowVideoPlayer={setShowVideoPlayer} />
+          )}
+          <span
+            className="btn btn-primary py-3 px-4"
+            onClick={() => setShowVideoPlayer(true)}
+          >
             <span className="fw-bold ">Take a video tour</span>
           </span>
-        </div> 
+        </div>
       </div>
     </div>
   );
